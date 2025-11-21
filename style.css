@@ -1,0 +1,269 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  
+  body {
+    background: #fff;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  /* ===== Top Bar / Nav ===== */
+  .topbar {
+    background: #2f66c4;
+    color: white;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .brand-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+  
+  .brand-contact {
+    font-size: 0.85rem;
+    opacity: 0.95;
+  }
+  
+  .brand-contact i {
+    margin-right: 6px;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  /* Task 2 hover styling */
+  .nav-link:hover {
+    text-decoration: underline;
+    font-size: 1.05rem;
+    opacity: 0.9;
+  }
+  
+  /* ===== Sections ===== */
+  section {
+    padding: 44px 8%;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: #2f66c4;
+    margin-bottom: 18px;
+  }
+  
+  /* ===== About ===== */
+  .about {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 28px;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .profile-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #6a0dad15;
+  }
+  
+  .about-right h1 {
+    font-size: 2.2rem;
+    color: #2f66c4;
+    margin-bottom: 10px;
+  }
+  
+  .wave {
+    font-size: 1.6rem;
+  }
+  
+  /* ===== Skills ===== */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 18px;
+    margin-top: 10px;
+  }
+  
+  .skill-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .skill-icon {
+    font-size: 2.2rem;
+    color: #2f66c4;
+    margin-bottom: 8px;
+  }
+  
+  .skill-card h3 {
+    margin-bottom: 4px;
+  }
+  
+  /* ===== Projects ===== */
+  .project {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .project h3 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+  }
+  
+  .project ul {
+    padding-left: 18px;
+  }
+  
+  /* ===== Recommendations ===== */
+  .recommendation-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 10px;
+  }
+  
+  .recommendation-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 14px 16px;
+    background: #fafafa;
+    font-style: italic;
+  }
+  
+  /* ===== Leave Recommendation Form ===== */
+  .leave-rec {
+    margin-top: 26px;
+    display: grid;
+    gap: 10px;
+    max-width: 600px;
+  }
+  
+  .leave-rec input,
+  .leave-rec textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .leave-rec button {
+    width: 140px;
+    padding: 10px 14px;
+    border: 2px solid #2f66c4;
+    background: white;
+    color: #2f66c4;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .leave-rec button:hover {
+    background: #2f66c4;
+    color: white;
+  }
+  
+  /* ===== Popup ===== */
+  .popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: grid;
+    place-items: center;
+    z-index: 999;
+  }
+  
+  .popup.hidden {
+    display: none;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 22px 26px;
+    border-radius: 12px;
+    text-align: center;
+    width: min(90%, 360px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  
+  .popup-content button {
+    margin-top: 12px;
+    padding: 8px 14px;
+    border: none;
+    background: #2f66c4;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* ===== Home Button ===== */
+  .home-btn {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: #2f66c4;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+  }
+  
+  .home-btn:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 700px) {
+    .topbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  
+    .about {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .about-left {
+      display: grid;
+      place-items: center;
+    }
+  }
+  

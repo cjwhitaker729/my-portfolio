@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Cameron</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- ======= HEADER / NAV ======= -->
+  <header class="topbar">
+    <div class="brand">
+      <h2 class="brand-name">Cameron Whitaker</h2>
+      <div class="brand-contact">
+        <p><i class="fa-solid fa-envelope"></i> cjwhitaker729@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> +1 (713) 397-1987</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#recommendations" class="nav-link">Recommendations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======= ABOUT SECTION ======= -->
+  <section id="about" class="about">
+    <div class="about-left">
+      <!-- Replace profile.png with your own image -->
+      <img src="about-me-pfp.png" alt="Profile picture" class="profile-img" />
+    </div>
+
+    <div class="about-right">
+      <h1>Hi, I'm Cameron! <span class="wave">👋</span></h1>
+      <p>
+        I’m an aspiring electrical and software engineer in training who loves building things that feel
+        simple, sturdy, and useful. I’m focusing on HTML, CSS, and JavaScript,
+        and I’m learning how to make pages both fancy and functional.
+      </p>
+      <p>
+        My goal is to grow into full-stack development and applying my skills learned
+        to electrical engineering, to both creating the hardware and software of various machines.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======= SKILLS SECTION ======= -->
+  <section id="skills" class="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fa-brands fa-html5 skill-icon"></i>
+        <h3>HTML</h3>
+        <p>.2 years experience</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-brands fa-css3-alt skill-icon"></i>
+        <h3>CSS</h3>
+        <p>.2 years experience</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-solid fa-chart-simple skill-icon"></i>
+        <h3>Technical Analysis</h3>
+        <p>4 years experience</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-brands fa-python skill-icon"></i>
+        <h3>Python</h3>
+        <p>.5 years experience</p>
+      </div>
+
+      <div class="skill-card">
+        <i class="fa-solid fa-database skill-icon"></i>
+        <h3>Dataflow Management</h3>
+        <p>3 years experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PROJECTS SECTION ======= -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project">
+      <h3>Unit Conversion Calculator</h3>
+      <ul>
+        <li>Built a metric to imperial system calculator with full functionality.</li>
+        <li>Conversion tool used for converting weight, distance, and temperature.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Data Ingest Script</h3>
+      <ul>
+        <li>Created a data ingestion script for bulk data ingestion and sorting.</li>
+        <li>Implemented using Python to quickly sort needed files, and sorting based off naming convention.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Personal Infographic</h3>
+      <ul>
+        <li>Designed a informative webpage to give to potential clients.</li>
+        <li>Detailing the individual's skills, projects, and overall work ability.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======= RECOMMENDATIONS SECTION ======= -->
+  <section id="recommendations" class="recommendations">
+    <h2 class="section-title">Recommendations</h2>
+
+    <div id="recommendation-list" class="recommendation-list">
+      <div class="recommendation-card">
+        “Cameron learns fast and is able to aclimate to any work culture or development with ease. Once he is in the team, he strives to make sure that every thing has a purpose and acts with initiave and respect.”
+      </div>
+      <div class="recommendation-card">
+        “Reliable teammate — Cameron has always been one to go to if I needed something done quickly, he doesn't seem to put much of anything on the back-burners and always gets any task I ask of done with little to no supervision or direction.”
+      </div>
+      <div class="recommendation-card">
+        “I've worked alongside Cameron in technical analysis, but his skills shown there really shine in any occupation - he learns everything required for a job, but sets out to learn more to not only develop himself, but the team around him.”
+      </div>
+    </div>
+
+    <div class="leave-rec">
+      <h3>Leave a Recommendation</h3>
+
+      <input
+        id="rec-name"
+        type="text"
+        placeholder="Name (Optional)"
+        maxlength="40"
+      />
+      <textarea
+        id="rec-message"
+        placeholder="Message"
+        rows="6"
+        maxlength="500"
+      ></textarea>
+
+      <button id="rec-submit">Submit</button>
+    </div>
+  </section>
+
+  <!-- ======= POPUP MODAL ======= -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <h3>Thank you!</h3>
+      <p>Your recommendation has been added.</p>
+      <button id="popup-close">Close</button>
+    </div>
+  </div>
+
+  <!-- ======= HOME ICON (scroll to top) ======= -->
+  <button id="home-btn" class="home-btn" aria-label="Back to top">
+    <i class="fa-solid fa-house"></i>
+  </button>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
